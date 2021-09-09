@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap" rel="stylesheet">
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body style="margin-left:10vw;margin-right: 10vw; background-color: black;color: white;" >
+  <style>
+    body{
+      font-weight:bold;
+      font-family: 'Glory', sans-serif;
+    }
+  </style>
+    <div class="title-area" style="width:80%;position: fixed; color: white;z-index: 9999;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light;" style="width: 100%;z-index: 9999;background-color: white;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h3><strong>C<img height="25" width="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/1200px-SARS-CoV-2_without_background.png">ronavirus Info-tainment</strong></h3></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" style="float: right;margin-left: 35vw;">
+              <li class="nav-item">
+                <strong><a class="nav-link" aria-current="page" href="{{url_for('mainpage')}}">Home</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link" href="{{url_for('news')}}">News</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link" href="{{url_for('funfacts')}}">Mythbusters</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link active" href="#">Stastistcs</a></strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+      <br><br><br><br>
+      <iframe style="width: 39.25vw;" src="https://public.domo.com/cards/bWxVg" width="600" height="400" marginheight="0" marginwidth="0" frameborder="0" ></iframe>
+      <iframe style="margin-left:0.25 vw; width: 39.2vw;" src="https://public.domo.com/cards/31O7r" width="600" height="400" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+      <br><br><br><br>
+      <div style="text-align: center;">
+        <h4>Get stastistcs for a specefic country</h4><br>
+        <form method="POST" action="{{ url_for('stats') }}">
+      <select style="padding: 1vw;border-radius: 10px; background-color: black;color: white; border: 2px solid white" name="countrytogetstatsfrom">
+        <option value="US">
+          United States
+        </option>
+ <option value="IN">
+          India
+        </option>
+ <option value="CN">
+          China
+        </option>
+<option value="CA">
+          Canada
+        </option>
+<option value="BG">
+          Bulgaria
+        </option> 
+<option value="BR">
+         Brazil
+        </option> 
+<option value="DK">
+          Denmark
+        </option> 
+<option value="EG">
+          Egypt
+        </option>
+<option value="FR">
+          France
+        </option>
+<option value="DE">
+          Germany
+        </option>
+<option value="JP">
+         Japan
+        </option>
+<option value="KR">
+         South Korea
+        </option>
+<option value="MY">
+          Malaysia
+        </option>
+<option value="NP">
+          Nepal
+        </option>
+<option value="PK">
+          Pakistan
+        </option>
+<option value="SG">
+          Singapore
+        </option>
+ <option value="TJ">
+          Tajikistan
+        </option>
+ <option value="YE">
+          Yemen
+        </option>
+      </select><br><br>
+      <button class="btn btn-warning" type="submit">
+         Get Stats
+      </button>
+    </form>
+    <br><br><br>
+    <h3>
+
+      Showing For Country ➡  {{countryname}}
+      <br>
+      <h6>Updated at ➡ {{dateofupdation}}</h6>
+    </h3>
+    
+  </div>
+  <br>
+  <br>
+    <div class="container" style="text-align:center">
+      <div class="row">
+        <div class="col">
+          <h5>
+            
+            Today's Confirmed✅ ➡  {{confirmed}}
+          </h5>
+        </div>
+        <div class="col">
+          <h5>
+            Today's Deaths💀 ➡ {{death}}
+          </h5>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col">
+            <h5>
+              Total Recovered ➕ ➡ {{totalrecovered}}
+            </h5>
+          </div>
+          <div class="col">
+            <h5>
+              
+              Total Deaths 🔪 ➡  {{totaldeath}}
+            </h5>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col">
+            <h5>
+              Recovery Rate 🏥➡  {{recoveryrate}}%
+            </h5>
+          </div>
+          <div class="col">
+            <h5>
+              Death Rate ☠ ➡ {{deathrate}}%
+            </h5>
+          </div>
+        </div>
+    </div>
+    
+
+      <br>
+      
+
+
+    
+      
+      <br><br><br>
+
+      
+      
+</body>
+</html>

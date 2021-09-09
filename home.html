@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+      body{
+        font-weight:bold;
+        font-family: 'Glory', sans-serif;
+        color: white;
+      }
+
+    </style>
+  
+</head>
+<body style="margin-left:10vw;margin-right: 10vw; background-color: black;color: white;z-index: 9999;" >
+    <div class="title-area" style="width:80%;position: fixed; color: white;z-index: 9999;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light;" style="width: 100%;z-index: 9999;background-color: white;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h3><strong>C<img height="25" width="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/1200px-SARS-CoV-2_without_background.png">ronavirus Info-tainment</strong></h3></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" style="float: right;margin-left: 35vw;">
+              <li class="nav-item">
+                <strong><a class="nav-link active" aria-current="page" href="#">Home</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link" href="{{url_for('news')}}">News</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link" href="{{url_for('funfacts')}}">Mythbusters</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link" href="{{url_for('stats')}}">Stastistcs</a></strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+      <br><br><br><br>
+      <button onclick="openChatBot()" style="position: fixed;float: right;margin-left:82%;margin-top: 35%;"  class="btn btn-danger myBtn" id="myBtn">
+        🤖
+      </button>
+      <div class="container" style="height: 100vh;" >
+        
+        <div style="text-align: center;align-items: center;">
+          <h1 id="text-data">How to stay safe during the pandemic?
+          </h1>
+          <div style="margin-left:18%;height: 40vh; width: 50vw;background-color: white; color:black">
+           <h3 style="float: left;margin-top:2%;margin-left: 2%;"> 
+             #1
+           </h3><br>
+           <h5 style="font-weight: bold;">
+            Maintain a safe distance from others, even if they don’t appear to be sick.
+
+           </h5>
+           <br>
+           <img style="height: 125%; width: 100%;" src="https://images.adsttc.com/media/images/6035/b5c0/f91c/8122/3000/0106/large_jpg/Untitled-6.jpg?1614132663
+           ">
+          </div>
+          <br><br><br><br><br><br><br>
+          <div style="margin-left:18%;height: 50vh; width: 50vw;background-color: white; color:black">
+            <h3 style="float: left;margin-top:2%;margin-left: 2%;"> 
+              #2
+            </h3><br>
+            <h5 style="font-weight: bold;">
+              Wear a mask in public, especially indoors or when physical distancing is not possible.
+
+ 
+            </h5>
+            <br>
+            <img style="height: 125%; width: 100%;" src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2021/02/doubleMask-1241644647-770x533-1.jpg
+            ">
+           </div>
+           <br><br><br><br><br><br><br><br>
+           <div style="margin-left:18%;height: 50vh; width: 50vw;background-color: white; color:black">
+            <h3 style="float: left;margin-top:2%;margin-left: 2%;"> 
+              #3
+            </h3><br>
+            <h5 style="font-weight: bold;">
+              Choose open, well-ventilated spaces over closed ones. Open a window if indoors.
+
+ 
+            </h5>
+            <br>
+            <img style="height: 125%; width: 100%;" src="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/images/poor-ventilation-good-ventilation.png
+            ">
+           </div>
+           <br><br><br><br><br><br><br><br>
+           <div style="margin-left:18%;height: 40vh; width: 50vw;background-color: white; color:black">
+            <h3 style="float: left;margin-top:2%;margin-left: 2%;"> 
+              #4
+            </h3><br>
+            <h5 style="font-weight: bold;">
+              Clean your hands often. Use soap and water, or an alcohol-based hand rub.
+
+ 
+            </h5>
+            <br>
+            <img style="height: 125%; width: 100%;" src="https://ichef.bbci.co.uk/news/976/cpsprodpb/785B/production/_111211803_5c7aa1c9-75e6-43b2-b33d-2901ce1fdb10.jpg
+            ">
+           </div>
+           <br><br><br><br><br><br><br>
+           <div style="margin-left:18%;height: 40vh; width: 50vw;background-color: white; color:black">
+            <h3 style="float: left;margin-top:2%;margin-left: 2%;"> 
+              #5
+            </h3><br>
+            <h5 style="font-weight: bold;">
+              Get vaccinated when it’s your turn. Follow local guidance about vaccination.
+
+ 
+            </h5>
+            <br>
+            <img style="height: 125%; width: 100%;" src="https://www.aimsindia.com/wp-content/uploads/2021/07/vacciene.jpg
+            ">
+           </div>
+           <br><br><br><br><br><br><br>
+           <div style="margin-left:18%;height: 40vh; width: 50vw;background-color: white; color:black">
+            <h3 style="float: left;margin-top:2%;margin-left: 2%;"> 
+              #6
+            </h3><br>
+            <h5 style="font-weight: bold;">
+              Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.
+
+ 
+            </h5>
+            <br>
+            <img style="height: 125%; width: 100%;" src="https://i.guim.co.uk/img/media/8ab6aa486c97f8e8521fe73ca0219ad3d8427d32/0_0_3001_1875/master/3001.jpg?width=700&quality=85&auto=format&fit=max&s=e387568522b18def57e9fb8ad7e634cf
+            ">
+           </div>
+           <br><br><br><br><br><br><br>
+           <div style="margin-left:18%;height: 40vh; width: 50vw;background-color: white; color:black">
+            <h3 style="float: left;margin-top:2%;margin-left: 2%;"> 
+              #7
+            </h3><br>
+            <h5 style="font-weight: bold;">
+              Stay home if you feel unwell.
+
+ 
+            </h5>
+            <br>
+            <img style="height: 125%; width: 100%;" src="https://digitalagencynetwork.com/wp-content/uploads/2020/05/memorable-stay-home-ad-campaigns-by-brands-for-covid-19-840x400.jpg
+            ">
+           </div> 
+          
+        </div>
+        
+        
+        <!-- <iframe style="height:100%;width: 100%;" src="https://theaiplayground.com/aarav.kapur2008/bot/COVID-19-AI-PROJECT/view"></iframe>
+        <button class="btn btn-danger" style="float: right; margin-top: 35%; margin-left: 4%; position: fixed;z-index: 999;">
+          🤖
+        </button> -->
+        
+      </div>
+      
+      <script>
+        function openChatBot(){
+          window.location.replace("{{url_for('bot')}}")
+        }
+      </script>
+</body>
+</html>

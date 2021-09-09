@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap" rel="stylesheet">
+</head>
+<body style="margin-left:10vw;margin-right: 10vw; background-color: black;color: white;"  class="mydiv">
+  <style>
+    body{
+      font-weight:bold;
+      font-family: 'Glory', sans-serif;
+    }
+  </style>
+  <style>
+    .swiper {
+      width: 600px;
+      height: 300px;
+  }
+  
+  body {
+    height: 100%;
+  }
+  
+  .mydiv {
+    height:100%;
+    color:black;
+    font-weight:bold;
+    animation: myanimation 10s infinite;
+  }
+  
+  @keyframes myanimation {
+    0% {background-color: maroon;}
+
+    25% {background-color: black;}
+    75%{background-color: blue;}
+    100% {background-color: maroon;}
+  }
+  
+  .swiper {
+          width: 100%;
+          height: 75vh  ;
+        }
+  
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          color:black;
+  
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+  
+  </style>
+    <div class="title-area" style="width:80%;position: fixed; color: white;z-index: 9999;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light;" style="width: 100%;z-index: 9999;background-color: white;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h3><strong>C<img height="25" width="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/1200px-SARS-CoV-2_without_background.png">ronavirus Info-tainment</strong></h3></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" style="float: right;margin-left: 35vw;">
+              <li class="nav-item">
+                <strong><a class="nav-link" aria-current="page" href="{{url_for('mainpage')}}">Home</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link active" href="#">News</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link" href="{{url_for('funfacts')}}">Mythbusters</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link" href="{{url_for('stats')}}">Stastistcs</a></strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+      <br><br><br><br>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">    
+          <div class="swiper-slide">
+            <div  class="row">
+             <b><h3 style="font-weight: bold;" >WHO criticizes wealthy nations for hoarding Covid treatments and vaccines, saying it’s prolonging pandemic</h3></b><br>
+             <h6 >Date:-  7th September 2021 </h6>
+              <div class="col">
+                <br><br>
+                <img style="height: 35vh; width: 25vw; margin-left: 5vw;" src="https://image.cnbcfm.com/api/v1/image/106846733-16143810662021-02-26t230127z_739916526_rc2n0m901ig9_rtrmadp_0_health-coronavirus-vaccines-johnson-johnson.jpeg?v=1614381142&w=740&h=416 ">
+                <br>
+                <a target="_blank" style="margin-left:-7vw;" href="https://www.cnbc.com/2021/09/07/who-says-wealthy-nations-are-prolonging-pandemic-by-hoarding-covid-treatments-and-vaccines.html ">Source</a>
+              </div>
+              <div class="col" style="margin-left:-10vw;">
+                <br><br>
+                <ul>
+                  <li>The U.S., which has fully immunized 53% of its population,<br> has already given booster shots to more than 1.3 million people. </li>
+                  
+                  <li>The European Union has fully inoculated 57% of its population <br>and is administering booster doses in France and the U.K , <br> according to the United Nations.</li>
+                  
+                  <li>Africa, by comparison, has fully vaccinated just 3% of its <br>population against Covid and 26 countries on the continent have<br> distributed less than half of their total vaccines.</li>
+                  
+                  <li>The World Health Organization condemned wealthy nations for <br> stockpiling coronavirus vaccines, treatments and protective equipment, <br> adding their failure to fairly distribute those resources <br> is fueling Covid outbreaks worldwide. </li>
+                </ul>
+              </div>
+             </div>
+          </div>
+          <div class="swiper-slide"><div  class="row">
+             <b><h3 style="font-weight: bold;" >Pandemic brought significant shifts in consumer preferences, says Britannia Industries</h3></b><br>
+             <h6 >Date:-  7th September 2021 </h6>
+              <div class="col">
+                <br><br>
+                <img style="height: 35vh; width: 25vw; margin-left: 5vw;" src="https://images.moneycontrol.com/static-mcnews/2017/08/Britannia-770x433.jpg?impolicy=website&width=770&height=431 ">
+                <br>
+                <a target="_blank" style="margin-left:-7vw;" href="https://www.moneycontrol.com/news/business/pandemic-brought-significant-shifts-in-consumer-preferences-says-britannia-industries-7440021.html ">Source</a>
+              </div>
+              <div class="col" style="margin-left:-10vw;">
+                <br><br>
+                <ul>
+                  <li>The pandemic has brought significant shifts in consumer preferences <br> and behaviours, including the growth of online business channels, <br> which are likely to strengthen and present new opportunities for food <br>business in future, according to Britannia Industries.</li>
+                  
+                  <li>The company is well placed to sustain growth and is confident of <br> addressing the evolving situation with its wide distribution network,<br> intrinsic brand strengths, innovation and technology capabilities and cost <br>  efficiency programmes,  it said in its latest annual report.</li>
+                  
+                </ul>
+              </div>
+             </div></div>
+          <div class="swiper-slide"><div  class="row">
+             <b><h3 style="font-weight: bold;" >India restricts religious festivals over COVID third wave fears</h3></b><br>
+             <h6 >Date:-  8th September 2021 </h6>
+              <div class="col">
+                <br><br>
+                <img style="height: 35vh; width: 25vw; margin-left: 5vw;" src="https://www.aljazeera.com/wp-content/uploads/2021/09/AP21248505868366.jpg?resize=770%2C513">
+                <br>
+                <a target="_blank" style="margin-left:-7vw;" href="https://www.aljazeera.com/news/2021/9/8/india-covid-religious-festivals-third-wave-mumbai ">Source</a>
+              </div>
+              <div class="col" style="margin-left:-10vw;">
+                <br><br>
+                <ul>
+                  <li>Indian authorities are restricting major religious <br> festivals that start this week and attract huge crowds, warning that <br>  a new COVID-19 wave had already begun in <br> the financial capital, Mumbai.</li>
+                  
+                  <li>“We can celebrate festivals later. Let us first <br> prioritise the lives and health of our citizens,” added Uddhav Thackeray, <br>  the chief minister of the western state <br> of Maharashtra, of which Mumbai is the capital.</li>
+                  
+                  <li>The last COVID-19 wave overwhelmed India’s <br> hospitals and was known to have killed <br>  more than 200,000 people.</li>
+                </ul>
+              </div>
+             </div></div>
+          <div class="swiper-slide"><div  class="row">
+             <b><h3 style="font-weight: bold;" >Explained: How Covid-19 vaccines fare with Delta variant</h3></b><br>
+             <h6 >Date:-  7th September 2021 </h6>
+              <div class="col">
+                <br><br>
+                <img style="height: 35vh; width: 25vw; margin-left: 5vw;" src="https://images.indianexpress.com/2021/09/vaccination-2.jpg ">
+                <br>
+                <a target="_blank" style="margin-left:-7vw;" href="https://indianexpress.com/article/explained/how-vaccines-fare-with-delta-variant-coronavirus-7495317/ ">Source</a>
+              </div>
+              <div class="col" style="margin-left:-10vw;">
+                <br><br>
+                <ul>
+                  <li>In a possible explanation for the rapid spread of the delta <br>  variant of SARS-CoV2 virus, a study published in journal <br> nature has found this particular variant to have a much higher <br> ability to infect, and to evade the immune response gained <br> through previous infections or vaccines.</li>
+                  
+                  <li>The Delta variant, or the B.1.617.2 lineage, first discovered <br>  in Maharashtra, is dominant not just in India but also <br> in several other countries. According to the World Health <br> Organization, the Delta variant is now present in at <br> least 170 countries.</li>
+                  
+                  <li>Compared to the original virus, the Delta variant was 8 times <br> more likely to cause breakthrough infections among vaccinated <br> people, and 6 times more likely to re-infect <br> people who have recovered from previous infections. </li>
+                 </ul>
+              </div>
+             </div></div>
+          <div class="swiper-slide"><div  class="row">
+             <b><h3 style="font-weight: bold;" >COVID-19 vaccine doses cross 70 crore in India</h3></b><br>
+             <h6 >Date:-  7th September 2021 </h6>
+              <div class="col">
+                <br><br>
+                <img style="height: 35vh; width: 25vw; margin-left: 5vw;" src="https://th.thgim.com/news/national/9fqkc8/article36349635.ece/ALTERNATES/FREE_660/assam ">
+                <br>
+                <a target="_blank" style="margin-left:-7vw;" href="https://www.thehindu.com/news/national/covid-19-vaccine-doses-cross-70-crore/article36346835.ece ">Source</a>
+              </div>
+              <div class="col" style="margin-left:-10vw;">
+                <br><br>
+                <ul>
+                  <li>The cumulative number of COVID-19 vaccine doses administered <br>  in the country crossed the 70 crore mark on Tuesday. <br> The last 10 crore doses were given in just 13 days, the <br> fastest so far, the Union Health Ministry said.</li>
+                  
+                  <li>The seven-day average number of doses administered daily has <br> been consistently improving since August-end. <br> The average daily doses have improved from around 50 lakh in <br> mid-August to 83 lakh at the end of September first week.</li>
+                  
+                  <li>To fully vaccinate all adults by 2021, over 1 crore vaccinations<br>  have to be done every day in the remaining days.<br> So far, this mark has been crossed on three days — <br> August 27 (1.07 crore), August 31 (1.35 crore) and <br> September 6 (1.15 crore). On Tuesday, as of 7 p.m., <br> 72,40,929 doses have been administered</li>
+                  
+                </ul>
+              </div>
+             </div></div>
+          <div class="swiper-slide"><div  class="row">
+             <b><h3 style="font-weight: bold;" >Third Covid-19 wave unlikely in India, fingers crossed!</h3></b><br>
+             <h6 >Date:-  7th September 2021 </h6>
+              <div class="col">
+                <br><br>
+                <img style="height: 35vh; width: 25vw; margin-left: 5vw;" src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202109/CORONA_REP_PTI_2_1200x768.jpeg?X7.SMoO4O8mQa34u5LOW8auGYF..kG2l&size=770:433">
+                <br>
+                <a target="_blank" style="margin-left:-7vw;" href="https://www.indiatoday.in/india/story/third-covid-wave-unlikely-in-india-1850282-2021-09-07 ">Source</a>
+              </div>
+              <div class="col" style="margin-left:-10vw;">
+                <br><br>
+                <ul>
+                  <li>Chances of a third wave look slim now, experts, <br> who have authored the SUTRA model that tracks the <br> progression of Covid-19 in India, said.</li>
+                  
+                  <li>Unless hit hard by a new Covid variant, chances <br> of a third wave battering India are now slim, leading <br> public health experts say. And a deep <br> dive into available data reinforces <br> the optimism, for now at least.</li>
+                  
+                  <li>“If there is no significantly faster spreading <br> mutant, the third wave will be a ripple,” according <br>  to Manindra Agrawal, a professor at Kanpur’s IIT.</li>
+                </ul>
+              </div>
+             </div></div>
+          <div class="swiper-slide"><h1>You're All Caught Up! ✔</h1></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+      </body>
+</html>

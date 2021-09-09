@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap" rel="stylesheet">
+
+
+<style>
+  .swiper {
+    width: 600px;
+    height: 300px;
+}
+
+body {
+  height: 100%;
+  font-family: 'Glory', sans-serif;
+}
+
+.mydiv {
+  height:100%;
+  color:black;
+  font-weight:bold;
+  animation: myanimation 10s infinite;
+}
+
+@keyframes myanimation {
+  0% {background-color: red;}
+  25%{background-color:yellow;}
+  50%{background-color:cyan;}
+  75%{background-color:blue;}
+  100% {background-color: red;}
+}
+
+.swiper {
+        width: 100%;
+        height: 77vh  ;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        color:black;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+</style>
+</head>
+<body style="margin-left:10vw;margin-right: 10vw;color: white;" class="mydiv">
+    <div class="title-area" style="width:80%;position: fixed; color: white;z-index: 9999;">
+       
+    <nav class="navbar navbar-expand-lg navbar-light bg-light;" style="width: 100%;z-index: 9999;background-color: white;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h3><strong>C<img height="25" width="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/1200px-SARS-CoV-2_without_background.png">ronavirus Info-tainment</strong></h3></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" style="float: right;margin-left: 35vw;">
+              <li class="nav-item">
+                <strong><a class="nav-link " aria-current="page" href="{{url_for('mainpage')}}">Home</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link" href="{{url_for('news')}}">News</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link active" href="#">Mythbusters</a></strong>
+              </li>
+              <li class="nav-item">
+                <strong><a class="nav-link" href="{{url_for('stats')}}">Stastistcs</a></strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+      <br><br><br><br>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img style="height: 65vh;" src="https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/myth_busters_hand_washing_4_5_4.tmb-1920v.jpg?sfvrsn=a8aaa062_2"></div>
+          <div class="swiper-slide"><img style="height: 65vh;" src="https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/myth_busters_hand_washing_4_5_6.tmb-1920v.jpg?sfvrsn=f60a78e1_2"></div>
+          <div class="swiper-slide"><img style="height: 65vh;" src="https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/myth_busters_hand_washing_4_5_5.tmb-1920v.jpg?sfvrsn=4fdfb8fe_2"></div>
+          <div class="swiper-slide"><img style="height: 65vh;" src="https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/myth_busters_hand_washing_4_5_2.tmb-1024v.jpg?sfvrsn=fb2e8292_2"></div>
+          <div class="swiper-slide"><img style="height: 65vh;" src="https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/myth_busters_hand_washing_4_5_3.tmb-1920v.jpg?sfvrsn=5e266a3f_2"></div>
+          <div class="swiper-slide"><img style="height: 65vh;" src="https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/myth_busters_hand_washing_4_5_1.tmb-1920v.jpg?sfvrsn=ed64012e_2"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div><br>
+      <h4 style="text-align: center;">
+        Source ➡ <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters" target="_blank">who.int</a>
+      </h4>
+      <br><br>
+      <div class="container" style="text-align: center;">
+        <div class="row">
+          <div class="col">
+            <iframe width="550" height="360" src="https://www.youtube.com/embed/UPFD5hb4zRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col">
+            <iframe width="550" height="360"  src="https://www.youtube.com/embed/qt44rum2_vc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        
+      </div>
+      
+      
+      
+      <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+</body>
+</html>
+
+
+
